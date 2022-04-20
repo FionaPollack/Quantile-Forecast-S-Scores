@@ -21,7 +21,7 @@ if (len(sys.argv) == 2):
     forecasts.set_index("Forecaster", inplace=True)
     print(forecasts)
     for forecaster in forecasts.index:
-        forecasts.iloc[forecaster,]
+        quants = list(forecasts.loc[forecaster, '5th':'95th'])
         # Pull out the five forecasts from that person and put them in a list.
         # Performing the correct s-score calculation on each element in the list, in order.
         # Write the new s-scores into the new s_score CSV file.
